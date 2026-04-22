@@ -1,4 +1,4 @@
-#eXoBlades
+eXoBlades
 =====================================
 
 Ever wanted a futuristic weaponry that is beyond Netherite and diamond?
