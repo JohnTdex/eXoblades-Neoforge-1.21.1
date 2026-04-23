@@ -1,6 +1,12 @@
 {
- "item.exoblades.exorium": "steel_ingot",
- "item.exoblades.exorium": "steel_rod",
- "item.exoblades.exorium": "reinforced_stick",
- "item.exoblades.exorium": "raw_exorium"
+ "item.exoblades.steel_ingot": "Steel Ingot",
+ "item.exoblades.steel_rod": "Steel Rod",
+ "item.exoblades.reinforced_stick": "Reinforced Stick",
+ "item.exoblades.raw_exorium": "Raw Exorium",
+
+  "block.exoblades.exorium_ore": "Exorium Ore",
+
+ "creativetab.exoblades.exoblade_items_tab": "ExoBlade Items",
+ "creativetab.exoblades.exoblade_blocks_tab": "ExoBlade Blocks"
+
 }
