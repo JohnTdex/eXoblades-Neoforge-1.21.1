@@ -33,7 +33,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CARBONATOR = registerBlock("carbonator",
             () -> new CarbonatorBlock(
                     BlockBehaviour.Properties.of()
-                            .strength(2.0f, 5.0f)
+                            .strength(3.5f, 5.0f)
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.METAL)
             )

@@ -5,8 +5,10 @@
  "item.exoblades.raw_exorium": "Raw Exorium",
 
   "block.exoblades.exorium_ore": "Exorium Ore",
+  "block.exoblades.carbonator": "Carbonator",
 
  "creativetab.exoblades.exoblade_items_tab": "ExoBlade Items",
- "creativetab.exoblades.exoblade_blocks_tab": "ExoBlade Blocks"
+ "creativetab.exoblades.exoblade_blocks_tab": "ExoBlade Blocks",
+
 
 }
