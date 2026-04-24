@@ -1,7 +1,6 @@
 package net.johntdex.exoblades.block;
 
 import net.johntdex.exoblades.ExoBlades;
-import net.johntdex.exoblades.block.custom.CarbonatorBlock;
 import net.johntdex.exoblades.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;

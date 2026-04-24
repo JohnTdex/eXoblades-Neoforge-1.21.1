@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "lit=false": { "model": "exoblades:block/carbonator_idle" },
-    "lit=true": { "model": "exoblades:block/carbonator_lit" }
-  }
-}

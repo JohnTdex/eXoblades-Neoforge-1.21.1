@@ -34,6 +34,7 @@ public class ModCreativeTabs {
                     .title(Component.translatable("creativetab.exoblades.exoblade_blocks_tab"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.EXORIUM_ORE);
+                        output.accept(ModBlocks.CARBONATOR);
 
                     }) .build());
 

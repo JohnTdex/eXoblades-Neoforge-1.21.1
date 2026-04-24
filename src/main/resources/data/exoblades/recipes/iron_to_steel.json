@@ -1,0 +1,9 @@
+{
+  "type": "exoblades:carbonating",
+  "ingredient": {
+    "item": "minecraft:iron_ingot"
+  },
+  "result": { "exoblades:steel_ingot": 1 },
+  "experience": 0.5,
+    "cookingtime": 100
+}
