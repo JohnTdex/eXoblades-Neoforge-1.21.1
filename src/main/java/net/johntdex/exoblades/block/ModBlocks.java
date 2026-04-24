@@ -29,16 +29,6 @@ public class ModBlocks {
     );
 
 
-    public static final DeferredBlock<Block> CARBONATOR = registerBlock("carbonator",
-            () -> new CarbonatorBlock(
-                    BlockBehaviour.Properties.of()
-                            .strength(3.5f, 5.0f)
-                            .requiresCorrectToolForDrops()
-                            .sound(SoundType.METAL)
-            )
-    );
-
-
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
