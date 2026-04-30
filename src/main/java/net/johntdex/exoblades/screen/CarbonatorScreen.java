@@ -12,11 +12,9 @@ import java.util.Set;
 
 public class CarbonatorScreen extends AbstractFurnaceScreen<CarbonatorMenu> {
 
-    // // 1. Define the Texture Path // //
     private static final ResourceLocation TEXTURE =
             ResourceLocation.fromNamespaceAndPath("exoblades", "textures/gui/container/carbonator.png");
 
-    // // 2. The Constructor (Matches the 1.21.1 Furnace requirements) // //
     public CarbonatorScreen(CarbonatorMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(
                 pMenu,
@@ -29,9 +27,16 @@ public class CarbonatorScreen extends AbstractFurnaceScreen<CarbonatorMenu> {
                 pPlayerInventory,
                 pTitle,
                 TEXTURE,
-                ResourceLocation.withDefaultNamespace("container/furnace/recipe_button"),
-                ResourceLocation.withDefaultNamespace("container/furnace/recipe_button_highlighted")
+                null,
+                null
         );
+    }
+
+    @Override
+    public void init() {
+        super.init();
+        // This tells the recipe book it's not allowed to be visible
+        this.recipeBookComponent.init(this.width, this.height, this.minecraft, false, this.menu);
     }
 
     // // 3. The Rendering Logic // //

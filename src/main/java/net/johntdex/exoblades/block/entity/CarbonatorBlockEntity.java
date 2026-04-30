@@ -26,7 +26,7 @@ public class CarbonatorBlockEntity extends AbstractFurnaceBlockEntity {
 
 
     public CarbonatorBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.CARBONATOR_BLOCK_ENTITY.get(), pPos, pBlockState, (RecipeType<? extends AbstractCookingRecipe>) ModRecipes.CARBONATING_TYPE.get());
+        super(ModBlockEntities.CARBONATOR_BLOCK_ENTITY.get(), pPos, pBlockState, (RecipeType<? extends AbstractCookingRecipe>)(Object)ModRecipes.CARBONATING_TYPE.get());
     }
 
     @Override

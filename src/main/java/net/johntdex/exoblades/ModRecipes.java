@@ -25,6 +25,8 @@ public class ModRecipes {
 
     // // The Serializer converts your JSON file into actual Java code variables. //
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<CarbonatorRecipe>> CARBONATING_SERIALIZER =
-            SERIALIZERS.register("carbonating", () -> new SimpleCookingSerializer<>(CarbonatorRecipe::new, 200));
+            SERIALIZERS.register("carbonating", () ->
+                    new SimpleCookingSerializer<CarbonatorRecipe>(CarbonatorRecipe::new, 200)
+            );
 
 }

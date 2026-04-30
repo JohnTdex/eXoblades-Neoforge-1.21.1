@@ -1,47 +1,19 @@
 package net.johntdex.exoblades.recipe;
 
 import net.johntdex.exoblades.ModRecipes;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
-import net.minecraft.world.level.Level;
 
-public class CarbonatorRecipe implements Recipe<SingleRecipeInput> {
-    protected final Ingredient ingredient;
-    protected final ItemStack result;
-    protected final float experience;
-    protected final int cookingTime;
+public class CarbonatorRecipe extends AbstractCookingRecipe {
 
-
-    public CarbonatorRecipe(Ingredient ingredient, ItemStack result, float experience, int cookingTime) {
-        this.ingredient = ingredient;
-        this.result = result;
-        this.experience = experience;
-        this.cookingTime = cookingTime;
-    }
-
-    public CarbonatorRecipe(String pGroup, CookingBookCategory pCategory, Ingredient pIngredient, ItemStack pResult, float pExperience, int pCookingTime) {
+    // The Serializer specifically looks for THIS constructor signature
+    public CarbonatorRecipe(String pGroup, CookingBookCategory pCategory, Ingredient pIngredient,
+                            ItemStack pResult, float pExperience, int pCookingTime) {
         super(ModRecipes.CARBONATING_TYPE.get(), pGroup, pCategory, pIngredient, pResult, pExperience, pCookingTime);
     }
-
-    @Override
-    public boolean matches(SingleRecipeInput pInput, Level pLevel) {
-        return this.ingredient.test(pInput.item());
-    }
-
-    @Override
-    public ItemStack assemble(SingleRecipeInput pInput, HolderLookup.Provider pRegistries) {
-        return this.result.copy();
-    }
-
-    @Override
-    public boolean canCraftInDimensions(int pWidth, int pHeight) {
-        return true;
-    }
-
-    @Override
-    public ItemStack getResultItem(HolderLookup.Provider pRegistries) {
-        return this.result;
+    // Add this to CarbonatorRecipe.java
+    public CarbonatorRecipe(Ingredient ingredient, ItemStack result, float experience, int cookingTime) {
+        this("", CookingBookCategory.MISC, ingredient, result, experience, cookingTime);
     }
 
     @Override
@@ -54,8 +26,8 @@ public class CarbonatorRecipe implements Recipe<SingleRecipeInput> {
         return ModRecipes.CARBONATING_TYPE.get();
     }
 
-    public static class Type implements RecipeType<CarbonatorRecipe> {
-        public static final Type INSTANCE = new Type();
-        public static final String ID = "carbonating";
-    }
+    public Ingredient getIngredient() { return this.ingredient; }
+    public ItemStack getResult() { return this.result; }
+    public float getExperience() { return this.experience; }
+    public int getCookingTime() { return this.cookingTime; }
 }
