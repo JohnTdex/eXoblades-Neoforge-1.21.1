@@ -25,6 +25,7 @@ public class ModCreativeTabs {
                        output.accept(ModItems.STEEL_ROD);
                        output.accept(ModItems.REINFORCED_STICK);
 
+
                     }) .build());
 
  public static  final Supplier<CreativeModeTab> EXOBLADES_BLOCK_TAB = CREATIVE_MODE_TAB.register("exoblade_blocks_tab",
@@ -33,6 +34,7 @@ public class ModCreativeTabs {
                     .title(Component.translatable("creativetab.exoblades.exoblade_blocks_tab"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.EXORIUM_ORE);
+                        output.accept(ModBlocks.CARBONATOR_BLOCK);
 
                     }) .build());
 

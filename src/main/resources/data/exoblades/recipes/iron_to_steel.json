@@ -1,6 +1,5 @@
 {
   "type": "exoblades:carbonating",
-  "category": "misc",
   "ingredient": {
     "item": "minecraft:iron_ingot"
   },

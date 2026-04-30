@@ -1,6 +1,7 @@
 package net.johntdex.exoblades.block;
 
 import net.johntdex.exoblades.ExoBlades;
+import net.johntdex.exoblades.block.custom.CarbonatorBlock;
 import net.johntdex.exoblades.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -26,6 +27,16 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.AMETHYST)
             )
+    );
+
+    public static final DeferredBlock<Block> CARBONATOR_BLOCK = registerBlock("carbonator_block",
+            () -> new CarbonatorBlock(
+                    BlockBehaviour.Properties.of()
+                            .strength(2.0f, 9.0f)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.METAL)
+            )
+
     );
 
 

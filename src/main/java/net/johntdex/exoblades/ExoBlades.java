@@ -1,9 +1,11 @@
 package net.johntdex.exoblades;
 
 import com.mojang.logging.LogUtils;
+import net.johntdex.exoblades.block.ModBlockEntities;
 import net.johntdex.exoblades.block.ModBlocks;
 import net.johntdex.exoblades.item.ModCreativeTabs;
 import net.johntdex.exoblades.item.ModItems;
+import net.johntdex.exoblades.menu.ModMenuTypes;
 import net.neoforged.bus.api.Event;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -39,7 +41,8 @@ public class ExoBlades {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-
+        ModMenuTypes.MENUS.register(modEventBus);
+        ModBlockEntities.BLOCK_ENTITY_TYPES.register(modEventBus);
 
 
         // Register the item to a creative tab
